@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+img{
+  width: 48px;
+  height: 48px;
+
+}
+
+mat-toolbar{
+  background-color: #d5b5bf !important;
+}
+
+h2{
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  color: white !important;
+  line-height: 80px;
+}

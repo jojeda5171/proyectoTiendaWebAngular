@@ -1,0 +1,14 @@
+<mat-sidenav-container autosize="true">
+  <mat-sidenav opened="true" mode="side">
+    <div class="opciones">
+      <h3 *ngIf="expanded">OPCIONES DEL SISTEMA</h3>
+    </div>
+    <toz-menu (onToggleExpanded)="toggleExpanded($event)"></toz-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <toz-header></toz-header>
+    <!-- <toz-page-login></toz-page-login> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

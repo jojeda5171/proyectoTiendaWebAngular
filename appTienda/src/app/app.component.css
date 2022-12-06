@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+mat-sidenav-content{
+  min-height: 100vh;
+}
+
+mat-sidenav{
+  max-width: 280px;
+  background-color: #f6f4ed;
+}
+
+.opciones{
+  padding: 0 24px;
+  background-color: #f6f4ed;
+  color: #181714;
+  min-height: 64px;
+}
+
+.opciones h3{
+  font-family: 'Dancing Script', cursive;
+  padding: 0;
+  margin: 0;
+  line-height: 64px;
+}

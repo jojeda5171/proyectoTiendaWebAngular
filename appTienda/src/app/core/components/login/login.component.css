@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+h2{
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+
+:host{
+  width: 80%;
+  display: block;
+}
+
+mat-form-field{
+  appearance: outline !important;
+}
+
+.btnColor{
+  background-color: #f6f4ed !important;
+  color: #181714 !important;
+  font-family: 'Dancing Script', cursive;
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.head th {
+  font-size: 20px;
+}
+
+.highline:hover {
+  background-color: #e7d4d3;
+}
+
+table {
+  background-color: #f6f4ed;
+}
+
+* {
+  font-family: 'Dancing Script', cursive;
+  color: #181714;
+  text-transform: uppercase;
+}
