@@ -1,2 +1,23 @@
 <toz-title></toz-title>
-<toz-container></toz-container>
+<toz-container>
+  <perfect-scrollbar>
+    <div style="width: 95%; margin: 0 auto;">
+      <mat-grid-list cols="4" rowHeight="400px">
+        <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let info of imgCollection">
+          <mat-card>
+            <mat-card-header>
+              <img mat-card-avatar [src]="info.image">
+              <mat-card-title>{{info.htitle}}</mat-card-title>
+              <mat-card-subtitle>{{info.hsubtitle}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="info.image">
+            <mat-card-content>
+              <mat-card-title>{{info.ctitle}}</mat-card-title>
+              <mat-card-subtitle>{{info.csubtitle}}</mat-card-subtitle>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </perfect-scrollbar>
+</toz-container>

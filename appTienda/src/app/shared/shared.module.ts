@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -31,8 +32,8 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
     MatCardModule,
     MatTableModule,
     MatPaginatorModule,
-    NgImageSliderModule
-
+    NgImageSliderModule,
+    MatGridListModule
   ], exports: [
     ContainerComponent,
     TitleComponent,
@@ -44,7 +45,9 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
     MatIconModule,
     MatTableModule,
     NgImageSliderModule,
-    CarruselComponent
+    CarruselComponent,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [
     { provide: MatPaginatorIntl, useValue: getPaginatorIntl() }
