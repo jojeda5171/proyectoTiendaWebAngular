@@ -13,13 +13,16 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
     ContainerComponent,
     TitleComponent,
     TableComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    CarruselComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +30,9 @@ import { MatIconModule } from '@angular/material/icon';
     FlexLayoutModule,
     MatCardModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgImageSliderModule
+
   ], exports: [
     ContainerComponent,
     TitleComponent,
@@ -37,7 +42,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatTooltipModule,
     MatButtonModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    NgImageSliderModule,
+    CarruselComponent
   ],
   providers: [
     { provide: MatPaginatorIntl, useValue: getPaginatorIntl() }
