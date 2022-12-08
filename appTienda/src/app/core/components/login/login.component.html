@@ -1,19 +1,24 @@
-<form fxLayout="column">
+<form [formGroup]="formReg" fxLayout="column" (ngSubmit)="onSubmit()">
   <h2>CREDENCIALES</h2>
   <mat-form-field>
     <mat-label>Usuario</mat-label>
-    <input matInput type="text" placeholder="Ingrese el Usuario" required>
+    <!-- <input type="text" formControlName="email" placeholder="Ingrese el Usuario" required> -->
+    <input matInput type="text" placeholder="Ingrese el Usuario" formControlName="email" required>
     <mat-icon matSuffix>person</mat-icon>
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Contraseña</mat-label>
-    <input matInput type="{{hidePassword?'password':'text'}}" placeholder="Ingrese la contraseña" required>
+    <!-- <input type="password" class="form-control" formControlName="password"> -->
+    <input class="form-control" matInput type="{{hidePassword?'password':'text'}}" placeholder="Ingrese la contraseña"
+      formControlName="password">
 
     <button mat-icon-button type="button" matSuffix (click)="hidePassword=!hidePassword">
       <mat-icon>{{hidePassword?"lock":"lock_open"}}</mat-icon>
     </button>
   </mat-form-field>
 
-  <button class="btnColor" mat-raised-button color="primary">INICIAR SESIÓN</button>
+  <button class="btnColor" mat-raised-button color="primary" value="Enviar">INICIAR SESIÓN</button>
+  <!-- <button class="btnColor" type="submit" color="primary" value="Enviar">INICIAR SESIÓN</button> -->
 </form>
+<button class="btnColor" mat-raised-button color="primary" (click)="onClick()">REGISTRARSE</button>

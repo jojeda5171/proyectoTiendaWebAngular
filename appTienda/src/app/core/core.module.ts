@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {MatListModule} from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -33,12 +34,14 @@ import { RouterModule } from '@angular/router';
     MatToolbarModule,
     MatMenuModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   exports: [
     PageLoginComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    
   ]
 })
 export class CoreModule { }

@@ -1,0 +1,22 @@
+<form [formGroup]="formReg" fxLayout="column" (ngSubmit)="onSubmit()">
+  <h2>REGISTRO</h2>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput type="text" placeholder="Ingrese el email" formControlName="email" required>
+    <mat-icon matSuffix>person</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Contraseña</mat-label>
+    <input class="form-control" matInput type="{{hidePassword?'password':'text'}}" placeholder="Ingrese la contraseña"
+      formControlName="password">
+
+    <button mat-icon-button type="button" matSuffix (click)="hidePassword=!hidePassword">
+      <mat-icon>{{hidePassword?"lock":"lock_open"}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <button class="btnColor" mat-raised-button color="primary" value="Enviar">REGISTRARSE</button>
+</form>
+
+<button class="btnColor" mat-raised-button color="primary" (click)="onClick()">INICIAR SESIÓN</button>
