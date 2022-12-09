@@ -23,4 +23,9 @@ export class HeaderComponent implements OnInit {
       .catch(error => console.log(error));
   }
 
+  update(){
+    alert('Coloque su nueva contraseña');
+    this.router.navigate(['cambiopass']);
+  }
+
 }
