@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticulosService } from '../../services/articulos.service';
 
 @Component({
   selector: 'toz-page-list',
@@ -20,9 +21,20 @@ export class PageListComponent implements OnInit {
     { htitle: 'Titulo Persona', hsubtitle: 'Subtitulo Persona', image: '../../../../assets/home11.jpg', ctitle: 'Titulo de la Card', csubtitle: 'Subtitulo de la Card' },
     { htitle: 'Titulo Persona', hsubtitle: 'Subtitulo Persona', image: '../../../../assets/home12.jpg', ctitle: 'Titulo de la Card', csubtitle: 'Subtitulo de la Card' },
   ];
-  constructor() { }
+  constructor(private articulosService:ArticulosService) {
+    this.loadArticles();
+  }
 
   ngOnInit(): void {
+  }
+
+  loadArticles() {
+    this.articulosService.loadArticles().subscribe(data => {
+      this.imgCollection = data;
+    }, error => {
+      alert(error);
+      console.log(error);
+    })
   }
 
 }

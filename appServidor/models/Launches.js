@@ -1,22 +1,18 @@
 const mongoose = require('mongoose');
-const HomeSchema = mongoose.Schema({
-    htitle: {
-        type: String,
-        required: true
-    },
-    hsubtitle: {
-        type: String,
-        required: true
-    },
+const LaunhSchema = mongoose.Schema({
     image: {
         type: String,
         required: true
     },
-    ctitle: {
+    thumbImage: {
         type: String,
         required: true
     },
-    csubtitle: {
+    alt: {
+        type: String,
+        required: true
+    },
+    title: {
         type: String,
         required: true
     },
@@ -26,4 +22,4 @@ const HomeSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('home', HomeSchema);
+module.exports = mongoose.model('lanzamientos', LaunhSchema);

@@ -26,4 +26,4 @@ const HomeSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('home', HomeSchema);
+module.exports = mongoose.model('articles', HomeSchema);
