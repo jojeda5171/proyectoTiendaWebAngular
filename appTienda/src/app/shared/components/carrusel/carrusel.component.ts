@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanzamientosService } from 'src/app/lanzamientos/services/lanzamientos.service';
 
 @Component({
   selector: 'toz-carrusel',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarruselComponent implements OnInit {
 
-  constructor() { }
+  constructor(private lanzamientosService:LanzamientosService) {
+    this.loadlaunches();
+  }
 
   ngOnInit(): void {
+  }
+
+  loadlaunches() {
+    this.lanzamientosService.loadlaunches().subscribe(data => {
+      this.imgCollection = data;
+    }, error => {
+      alert(error);
+      console.log(error);
+
+    })
   }
 
   imgCollection: Array<object> = [

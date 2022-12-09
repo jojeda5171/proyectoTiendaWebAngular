@@ -18,6 +18,7 @@ app.use('/api/inicio', require('./routes/homeRoute'));
 app.use('/api/articulos', require('./routes/articleRoute'))
 app.use('/api/ninos', require('./routes/ninosRoute'))
 app.use('/api/lanzamientos', require('./routes/launchRoute'))
+app.use('/api/favoritos', require('./routes/favoriteRoute'))
 
 app.listen(5000, () => {
     console.log('Servidor corriendo en puerto 5000');

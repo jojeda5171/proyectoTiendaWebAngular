@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FavoritosService } from '../../services/favoritos.service';
 
 @Component({
   selector: 'toz-page-list',
@@ -21,9 +22,20 @@ export class PageListComponent implements OnInit {
     { htitle: 'Titulo Persona', hsubtitle: 'Subtitulo Persona', image: '../../../../assets/home12.jpg', ctitle: 'Titulo de la Card', csubtitle: 'Subtitulo de la Card' },
   ];
 
-  constructor() { }
+  constructor(private favoriteService:FavoritosService) {
+    this.loadFavorites();
+  }
 
   ngOnInit(): void {
+  }
+
+  loadFavorites() {
+    this.favoriteService.loadFavorites().subscribe(data => {
+      this.imgCollection = data;
+    }, error => {
+      alert(error);
+      console.log(error);
+    })
   }
 
 }
